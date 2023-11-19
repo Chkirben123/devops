@@ -56,7 +56,25 @@ class BD:
                 bd2.proprietaire = temp
 
 
-
+class BibDeClasse:
+    def __init__(self):
+        self.bibliotheque = []
+    
+    def ajouter(self, oeuvre):
+        if oeuvre not in self.bibliotheque:
+            self.bibliotheque.append(oeuvre)
+        else :
+            print("L'oeuvre existe déjà")
+    
+    def supprimer(self, oeuvre):
+        if oeuvre in self.bibliotheque:
+            self.bibliotheque.remove(oeuvre)
+        else :
+            print("L'oeuvre n'existe pas")
+            
+    def afficher(self):
+        for x in self.bibliotheque :
+           print(x)
 
 
 
